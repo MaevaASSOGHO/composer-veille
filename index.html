@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composer, guide complet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <p>GROUPE F</p>
+    </header>
+    <section class="data-container">
+        <section class="container" id="titre">
+            <div class="slide-text">
+                <h1>Maîtrisez Composer : Le Guide Ultime du Gestionnaire de Dépendances PHP</h1>
+                <p>Simplifiez la gestion de vos dépendances PHP, améliorez votre productivité et renforcez la sécurité de
+                    vos projets grâce à Composer.</p>
+            </div>
+            <div class="slide-img">
+                <img src="img1.jpg" alt="Codeur PHP">
+            </div>
+        </section>
+        <section class="container" id="presentation">
+            <h2>Composer : Qu'est-ce Que C'est Exactement ?</h2>
+            <div class="two-columns">
+                <div class="column">
+                    <h4>Le Gestionnaire Indispensable</h4>
+                    <p>Composer est un outil essentiel pour tout développeur PHP moderne. Il gère les dépendances de vos
+                        projets, un peu comme npm pour Node.js ou pip pour Python.</p>
+                    <ul>
+                        <li>Installation et gestion des librairies</li>
+                        <li>Résolution des conflits de versions</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4>Au Cœur de Composer</h4>
+                    <p>Les fichiers composer.json (liste des dépendances) et composer.lock (versions installées) sont
+                        cruciaux. L'installation est simple avec un script et une configuration du PATH.</p>
+                </div>
+            </div>
+        </section>
+        <section class="container" id="avantages">
+            <h2>Les Avantages Incontournables de Composer</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <i class="fas fa-rocket"></i>
+                    <h4>Productivité Accrue</h4>
+                    <p>Gagnez un temps précieux en automatisant l'installation, la mise à jour et la suppression des
+                        dépendances.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-lock"></i>
+                    <h4>Sécurité Renforcée</h4>
+                    <p>Bénéficiez de mises à jour simplifiées pour corriger rapidement les vulnérabilités.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-code"></i>
+                    <h4>Code Plus Maintenable</h4>
+                    <p>Améliorez la maintenabilité grâce à la résolution automatique des conflits de versions et à
+                        l'autochargement de classes (PSR-4).</p>
+                </div>
+            </div>
+        </section>
+        <section class="slide" id="alternatives">
+            <h2>Alternatives à Composer : Pourquoi Il Reste le Choix Numéro Un</h2>
+            <div class="slide-list">
+                <h4>PEAR : L'Ancien Concurrent</h4>
+                <p>PEAR (PHP Extension and Application Repository) est une alternative plus ancienne, mais moins flexible
+                    que Composer.</p>
+            </div>
+            <div class="slide-list">
+                <h4>Git Submodules : Une Solution Complexe</h4>
+                <p>L'utilisation de Git submodules peut être complexe pour la gestion des versions et des dépendances
+                    transitives.</p>
+            </div>
+            <p>Depuis 2012, Composer s'est imposé comme le standard de l'industrie PHP grâce à sa flexibilité et sa
+                simplicité d'utilisation.</p>
+        </section>
+        <section class="container" id="action">
+            <h2>Composer en Action : Commandes Essentielles</h2>
+            <div class="cards-container-4">
+                <div class="action-card">
+                    <i class="fas fa-download"></i>
+                    <h4>require</h4>
+                    <p>Installer un paquet et ses dépendances.</p>
+                </div>
+                <div class="action-card">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h4>update</h4>
+                    <p>Mettre à jour les paquets.</p>
+                </div>
+                <div class="action-card">
+                    <i class="fab fa-instalod"></i>
+                    <h4>install</h4>
+                    <p>Installer les dépendances.</p>
+                </div>
+                <div class="action-card">
+                    <i class="fas fa-folder"></i>
+                    <h4>autoload</h4>
+                    <p>Générer l'autochargement.</p>
+                </div>
+            </div>
+        </section>
+        <section class="slide" id="maitrise">
+            <h2>Maîtriser Composer : Les Bonnes Pratiques Essentielles</h2>
+           <div class="maitrise-content">
+            <div class="slide-img">
+                <img src="img3.jpg" alt="arbre de code">
+            </div>
+            <div class="slide-text">
+                <div class="slide-card">
+                    <h4> Versions et Contraintes</h4>
+                    <p>Utilisez des versions spécifiques ou des contraintes de version (~ ou ^) dans composer.json.</p>
+                </div>
+                <div class="slide-card">
+                    <h4>Commitez composer.lock</h4>
+                    <p>Commitez le fichier composer.lock pour assurer la reproductibilité des environnements.</p>
+                </div>
+                <div class="slide-card">
+                    <h4>Mises à Jour Régulières</h4>
+                    <p>Mettez à jour régulièrement les dépendances avec composer update.</p>
+                </div>
+                <div class="slide-card"loading="lazy">
+                    <h4>Analyse de Sécurité</h4>
+                    <p>Utilisez des outils d'analyse de sécurité pour détecter les vulnérabilités.</p>
+                </div>
+            </div>
+           </div>
+        </section>
+        <section class="slide" id="dangers">
+            <h2>Les Dangers et Problèmes Potentiels de Composer : Restez Vigilant</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h4>Conflits de versions</h4>
+                    <p>Des mises à jour peuvent créer des conflits inattendus.</p>
+                </div>
+                <div class="card">
+                    <i class="far fa-bomb"></i>
+                    <h4>Vulnérabilités</h4>
+                    <p>Les dépendances peuvent contenir des failles de sécurité.</p>
+                </div>
+                <div class="card">
+                    <i class="far fa-battery-quarter"></i>
+                    <h4>Performances</h4>
+                    <p>Un grand nombre de dépendances peut impacter les performances.</p>
+                </div>
+            </div>
+    
+        </section>
+        <section class="slide" id="conclusion">
+            <div class="slide-text">
+                <h2>Conclusion : Adoptez Composer et Transformez Votre Développement PHP</h2>
+                <p>Composer est bien plus qu'un simple gestionnaire de dépendances. C'est un outil indispensable pour tout
+                    développeur PHP moderne, offrant des bénéfices considérables en termes de gestion des dépendances, de
+                    productivité et de sécurité. En suivant les bonnes pratiques, vous optimiserez son utilisation et
+                    améliorerez la qualité de vos projets. Explorez les ressources supplémentaires sur Packagist et dans la
+                    documentation officielle pour approfondir vos connaissances et exploiter pleinement le potentiel de
+                    Composer.</p>
+            </div>
+            <div class="slide-img">
+                <img src="img2.jpg" alt="PHP">
+            </div>
+        </section>
+    </section>
+    <footer> SIMPLON CI 2025</footer>
+</body>
+
+</html>

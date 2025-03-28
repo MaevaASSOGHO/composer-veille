@@ -1,0 +1,459 @@
+/* Importer les polices et icônes */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
+
+/* Réinitialisation et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+body {
+    background-color: #123332;
+    color: #ffd9be;
+    line-height: 1.6;
+}
+
+header, footer {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Styles génériques pour les slides */
+.container, .slide {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(18, 51, 50, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h4 {
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #ffd9be;
+    margin: 1rem auto 0;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #ffd9be;
+}
+
+/* Slide #titre */
+#titre {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background-color: #123332;
+}
+
+.slide-text {
+    flex: 1;
+}
+
+.slide-img {
+    flex: 1;
+    text-align: center;
+}
+
+.slide-img img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles spécifiques pour la section présentation */
+#presentation {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ef9c82;
+}
+
+#presentation h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: black;
+    font-size: 2rem;
+    position: relative;
+}
+
+#presentation h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ffd9be;
+    margin: 0.5rem auto 0;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.column {
+    background: #ef9c82;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid #123332;
+}
+
+.column h4 {
+    color: black;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.column p {
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.column ul {
+    padding-left: 1.5rem;
+    color: black;
+}
+
+.column li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+.column li::before {
+    content: "•";
+    color: #123332;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Version responsive */
+@media (max-width: 768px) {
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .column {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* SECTION AVANTAGES - 3 COLONNES */
+#avantages {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(18, 51, 50, 0.8);
+}
+
+#avantages , #dangers h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #ffd9be;
+    font-size: 2rem;
+    position: relative;
+}
+
+#avantages h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ffd9be;
+    margin: 0.8rem auto 0;
+}
+
+#avantages .cards-container, #dangers .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+}
+
+#avantages .card, #dangers.card {
+    background: rgba(255, 217, 190, 0.1);
+    padding: 1.8rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 3px solid #ef9c82;
+}
+
+#avantages .card:hover, #dangers .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+#avantages .card i {
+    font-size: 2.2rem;
+    color: #ef9c82;
+    margin-bottom: 1.2rem;
+}
+
+#avantages .card h4 {
+    color: #ffd9be;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+#avantages .card p {
+    color: #ffd9be;
+    line-height: 1.6;
+}
+
+/* SECTION ACTIONS - 4 COLONNES */
+#action {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(18, 51, 50, 0.8);
+}
+
+#action h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffd9be;
+    font-size: 2rem;
+    position: relative;
+}
+
+#action h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ffd9be;
+    margin: 0.8rem auto 0;
+}
+
+#action .cards-container-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+#action .action-card , #dangers .card {
+    background: rgba(255, 217, 190, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid #ef9c82;
+}
+
+#action .action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#action .action-card i {
+    font-size: 2rem;
+    color: #ef9c82;
+    margin-bottom: 1rem;
+}
+
+#action .action-card h4 {
+    color: #ffd9be;
+    margin-bottom: 1rem;
+}
+
+#action .action-card p {
+    color: #ffd9be;
+}
+
+/* Responsive pour les deux sections */
+@media (max-width: 1000px) {
+    #avantages .cards-container,
+    #action .cards-container-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #avantages .cards-container,
+    #action .cards-container-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fas, .far, .fab {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+/* Icônes dans les cartes */
+#avantages .card i {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 2.2rem;
+}
+
+#action .action-card i {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+/* Slide #maitrise */
+#maitrise {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.maitrise-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+#maitrise .slide-img {
+    flex: 1;
+    position: relative;
+    align-self: stretch;
+}
+
+#maitrise .slide-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    max-height: 400px;
+}
+
+#maitrise .slide-text {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.slide-card {
+    background: rgba(255, 217, 190, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 4px solid #ef9c82;
+    height: 100%;
+}
+
+/* Slide #conclusion */
+#conclusion {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+#conclusion h2 {
+    font-size: 2.5rem; /* Taille augmentée */
+    margin-bottom: 0.5rem;
+    color: #ffd9be;
+    position: relative;
+    text-align: center;
+}
+#conclusion p {
+    text-align: center; /* Texte centré */
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+/* Listes */
+ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+li::before {
+    content: "•";
+    color: #ef9c82;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive général */
+@media (max-width: 900px) {
+    #maitrise-content {
+        flex-direction: column;
+    }
+    
+    #maitrise .slide-img {
+        width: 100%;
+        order: -1;
+        margin-bottom: 2rem;
+    }
+    
+    #maitrise .slide-img img {
+        max-height: 300px;
+    }
+    
+    #maitrise .slide-text {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    #titre, #conclusion {
+        flex-direction: column;
+    }
+    
+    .container, .slide {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+}
